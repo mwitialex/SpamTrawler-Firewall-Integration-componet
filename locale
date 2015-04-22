@@ -9,7 +9,7 @@
  * @link      http://www.opensource-socialnetwork.org/licence
  */
 $en = array(
-	'com:ossn:severload' => 'severload',			
+	'com:ossn:SpamTrawler' => 'SpamTrawler',			
 	
 );
 ossn_register_languages('en', $en); 
