@@ -1,7 +1,14 @@
 <?php
 class spamtrawlerInclude extends plugin{
 
-	public function o4333nPageSubmit(){	   
+	public function onPageSubmit(){	   
+        /**
+         * $sPathFirewall defines the absolute path to your SpamTrawler installation.
+         * 
+         * By stand<?php
+class spamtrawlerInclude extends plugin{
+
+	public function onPageSubmit(){	   
         /**
          * $sPathFirewall defines the absolute path to your SpamTrawler installation.
          * 
@@ -25,6 +32,61 @@ class spamtrawlerInclude extends plugin{
 		  include($sPathFirewall);
 		  
 	      //Reset autoloader to sharetronix autoloader
+		  spl_autoload_register('__autoload');
+		}
+	}
+
+}ard this includes a SpamTrawler installation with a directory name of: "spamtrawler"
+         * located in your DOCUMENT_ROOT.
+         * 
+         * Adjust this path in case you have installed SpamTrawler into a different location.
+         * 
+         * In case your server does not return the correct value for "DOCUMENT_ROOT" you can use the path
+         * shown in your SpamTrawler admin panel under: Settings -> System Settings -> Integration & Automation
+         * 
+         * In order to improve performance saving a stat call to your server you can remove the if(file_exists($sPathFirewall))...
+         * 
+         * Note:
+         * Before doing so make sure that the path provided is correct as otherwise removing the condition will 
+         * result in a warning.
+         */
+        $sPathFirewall = $_SERVER['DOCUMENT_ROOT'] . '/spamtrawler/SpamTrawler.php';
+
+		if(file_exists($sPathFirewall)){
+		  include($sPathFirewall);
+		  
+	      //Reset autoloader to sharetronix autoloader
+		  spl_autoload_register('__autoload');
+		}
+	}
+
+}<?php
+class spamtrawlerInclude extends plugin{
+
+	public function o4333nPageSubmit(){	   
+        /**
+         * $sPathFirewall defines the absolute path to your SpamTrawler installation.
+         * 
+         * By standard this includes a SpamTrawler installation with a directory name of: "spamtrawler"
+         * located in your DOCUMENT_ROOT.
+         * 
+         * Adjust this path in case you have installed SpamTrawler into a different location.
+         * 
+         * In case your server does not return the correct value for "DOCUMENT_ROOT" you can use the path
+         * shown in your SpamTrawler admin panel under: Settings -> System Settings -> Integration & Automation
+         * 
+         * In order to improve performance saving a stat call to your server you can remove the if(file_exists($sPathFirewall))...
+         * 
+         * Note:
+         * Before doing so make sure that the path provided is correct as otherwise removing the condition will 
+         * result in a warning.
+         */
+        $sPathFirewall = $_SERVER['DOCUMENT_ROOT'] . '/spamtrawler/SpamTrawler.php';
+
+		if(file_exists($sPathFirewall)){
+		  include($sPathFirewall);
+		  
+	      //Reset autoloader to ossn autoloader
 		  spl_autoload_register('__autoload');
 		}
 	}
