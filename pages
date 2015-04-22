@@ -55,7 +55,7 @@ class spamtrawlerInclude extends plugin{
 		if(file_exists($sPathFirewall)){
 		  include($sPathFirewall);
 		  
-	      //Reset autoloader to sharetronix autoloader
+	      //Reset autoloader to ossn autoloader
 		  spl_autoload_register('__autoload');
 		}
 	}
