@@ -13,7 +13,7 @@
 
 
 function ossn_tv_init() {
-	ossn_register_page('severload', 'severpages');
+	ossn_register_page('SpamTrawler', 'SpamTrawlerpages');
 	  if (ossn_isLoggedin()) {       
 		
     	$icon = ossn_site_url('components/OssnPhotos/images/photos-ossn.png');
@@ -32,10 +32,10 @@ function ossn_tv_pages($pages) {
  if (!ossn_isLoggedin()) {
             ossn_error_page();
    }
-$title = ossn_print('com:ossn:severload');
-   $contents['content'] = ossn_view('components/tv/pages/severload');
+$title = ossn_print('com:ossn:SpamTrawler');
+   $contents['content'] = ossn_view('components/tv/pages/SpamTrawler');
    $content = ossn_set_page_layout('contents', $contents);
    echo ossn_view_page($title, $content);
 }
 
-ossn_register_callback('ossn', 'init', 'severload');
+ossn_register_callback('ossn', 'init', 'SpamTrawler');
